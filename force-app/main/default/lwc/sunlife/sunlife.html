@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Sun Life" icon-name="action:edit">
+        <div class="slds-m-around_medium">
+            <div onkeyup={handleKeyUp}>
+                <lightning-input
+                    name="enter-search"
+                    label="Search when user hits the 'enter' key"
+                    type="search"
+                ></lightning-input>
+            </div>
+                <lightning-datatable
+                    key-field="Id"
+                    data={data}
+                    show-row-number-column
+                    hide-checkbox-column
+                    columns={columns}
+                    onsave={handleSave}
+                    draft-values={draftValues}
+                    default-sort-direction={defaultSortDirection}
+                    sorted-direction={sortDirection}
+                    sorted-by={sortedBy}
+                    onsort={onHandleSort}>
+                </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>  
